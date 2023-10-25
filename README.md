@@ -32,6 +32,17 @@ After preparing the features, I loaded the data into KNIME, an image of the cond
 
 ![KNIME Workflow](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/f359ae1e-dedf-4091-8b1a-e3235b093440)
 
+Starting with the random forest models, I found the K-Fold cross validation partitioner (x-partitioner) performed marginally better than simple partitioning. (76.6% rather than 76.4%). 
+
+![Random Forest](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/8171c23d-69dc-46e9-80b9-64187f90f167)
+
+Moving on towards ANN, I tried many types of sampling methods as well as number of iterations, hidden layers, and neurons per layer. 
+I found that bootsrap sampling performed the best with 250 iterations, 3 hidden layers, and 20 neurons per layer achieving a 71.7% prediction accuracy. 
+
+![Screenshot 2023-10-25 171649](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/d90d87c0-d084-4a41-9571-e8e99d1436f3)
+
+Furthermore, while I built out logistic regression models and Naive Bayes models, I was unable to achieve a 70% + accuracy with them. 
 
 
 ### Conclusion and Next Steps
+In conclusion, I felt this project was very helpful in furthering my knowledge of pandas, ML, and KNIME. I aim to undertake a similar project in the coming weeks using python libraries rather than KNIME to conduct the machine learning, so I can add new tools to my toolkit. 
