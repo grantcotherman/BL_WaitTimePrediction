@@ -43,6 +43,9 @@ I found that bootsrap sampling performed the best with 250 iterations, 3 hidden 
 
 Furthermore, while I built out logistic regression models and Naive Bayes models, I was unable to achieve a 70% + accuracy with them. 
 
+Finally, I fed a Random Forest model into an excel writer to extract the following visualization depicting the importance of different features in my dataset - 
+
+![BL_FeatureImportance](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/60e01ed2-b306-43a7-bbf3-8b3ca4355afa)
 
 ### Conclusion and Next Steps
 In conclusion, I felt this project was very helpful in furthering my knowledge of pandas, ML, and KNIME. I aim to undertake a similar project in the coming weeks using python libraries rather than KNIME to conduct the machine learning, so I can add new tools to my toolkit. 
