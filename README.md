@@ -24,8 +24,14 @@ After retrieving the wait time and feature data from https://touringplans.com, I
 After gaining a better understanding of the data, I removed the rows with NAs. As the NAs were few and primarily in the insession columns, I decided it would be better to drop the rows compeltely rather than to spend the time building a replacement method for the insession values. 
 
 Next, I binned the target variables (wait_times) into three categories, the temperature variables into four, rounded the times down to the hour, binned park hours to four categories, and finally binned precipitation to two categories. The data dictionary after the binning can be seen below - 
+
 ![Data_Dictionary_Ping](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/9f76b28d-05a7-4521-921a-db1afa48b857)
 
 ### Machine Learning Models and Performance
+After preparing the features, I loaded the data into KNIME, an image of the condesned workflow is below - 
+
+![KNIME Workflow](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/f359ae1e-dedf-4091-8b1a-e3235b093440)
+
+
 
 ### Conclusion and Next Steps
