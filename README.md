@@ -10,10 +10,10 @@ In this project, I retrieved feature wait time data and feature data from tourin
 
 ![BL_FeatureImportance](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/b68b17b3-f57a-4013-8843-d76adef6ae6b)
 
-## Full Project Write-Up
+## Project Write-Up
 
 ### Data Cleaning and Preparation
-After retrieving the wait time and feature data from https://touringplans.com, I first looked at the data dictionary to gain insight into the features and then opened up the features dataset in excel. In excel, I removed the features that were related to parks outside of the Magic Kingdom park, which is where this ride is, along with some values that were highly unlikely to contribute to the predictions and values that would be unknown in a prediction scenario. After this first round of removal, I opened up and combined the datasets in a Jupyter Notebook. Using pandas commands, I got looked at the datatypes and used the describe command to better understand the target variable (wait-time). Afterwards, I continued the eploratory analysis by generating visualizations with Matplotlib and Seaborn. See the visualizations below - 
+After retrieving the wait time and feature data from https://touringplans.com, I first looked at the data dictionary to gain insight into the features and then opened up the features dataset in excel. In excel, I removed the features that were related to parks outside of the Magic Kingdom park, which is where this ride is, along with some values that were highly unlikely to contribute to the predictions and values that would be unknown in a prediction scenario. After this first round of removal, I opened up and combined the datasets in a Jupyter Notebook. Using pandas commands, I got looked at the datatypes and used the describe command to better understand the target variable (wait-time). Afterwards, I continued the eploratory analysis by generating visualizations with Matplotlib and Seaborn. See a few of the visualizations below - 
 
 ![Box_Whisker](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/d951baa3-693f-45c2-8b16-04e40fd65e67)
 
@@ -21,8 +21,10 @@ After retrieving the wait time and feature data from https://touringplans.com, I
 
 ![BL_SeptemberHeatMap](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/b0fc4c04-34c7-4ebd-be9b-2dc40db7743f)
 
+After gaining a better understanding of the data, I removed the rows with NAs. As the NAs were few and primarily in the insession columns, I decided it would be better to drop the rows compeltely rather than to spend the time building a replacement method for the insession values. 
 
-
+Next, I binned the target variables (wait_times) into three categories, the temperature variables into four, rounded the times down to the hour, binned park hours to four categories, and finally binned precipitation to two categories. The data dictionary after the binning can be seen below - 
+![Data_Dictionary_Ping](https://github.com/grantcotherman/BL_WaitTimePrediction/assets/94634170/9f76b28d-05a7-4521-921a-db1afa48b857)
 
 ### Machine Learning Models and Performance
 
